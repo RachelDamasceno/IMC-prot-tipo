@@ -71,4 +71,4 @@ function setResul(msg,isValid) {
 
 }
 
-// PAREI EM 24 MINUTOS
+// PAREI EM 35 MINUTOS
