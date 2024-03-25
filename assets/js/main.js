@@ -24,8 +24,9 @@ formu.addEventListener("submit", (event) => {
 
 
   let imc = getIMC(peso,altura)// passando o return da função get imc para a variavel imc
+  let nivelIMC = getNivelIMC (imc)// variavel que pega mensagem de imc
 
-  setResul(`O resultado é ${imc}`,true)
+  setResul(`O resultado é ${nivelIMC}: IMC  - ${imc}`,true)
 
 });
 
@@ -33,6 +34,32 @@ formu.addEventListener("submit", (event) => {
 function getIMC (peso,altura){
   let cal = peso / altura **2
   return cal.toFixed(2); // retornando somente o resultado do imc ja com 2 casas decimais
+}
+
+// funçao para retornar o nivel do imc
+function getNivelIMC (imc){
+  const nivel = ['Abaixo do peso','Peso normal','Sobrepeso','Obesidade grau 1','Obesidade grau 2',
+  'Abesidade grau 3'] // array com mensagens de imc
+  
+  // sequencia de if com return que coleta o index do array e retorna o valor
+  if(imc > 40){
+    return nivel [5];
+  }
+  if(imc >= 35){
+    return nivel [4];
+  }
+if(imc >= 30){
+    return nivel [3];
+  }
+if(imc >= 25){
+    return nivel [2];
+  }
+if(imc >= 18.5){
+    return nivel [1];
+  }
+if(imc < 18.5){
+    return nivel [0];
+  }
 }
 
 // agora vamos criar uma função que ao tocar no botão enviar aparecça uma mensagem. O enviar deve ser feito na função acima(formu) ja com a mensagem, usando o setResul passamso o valor teste para o parametro msg. Nessa função de baixo vamos criar so o mecanismo de envio do texto gerado no formu para o html.

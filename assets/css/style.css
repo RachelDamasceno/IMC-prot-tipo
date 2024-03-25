@@ -23,7 +23,11 @@ body {
   margin: 50px auto;
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
 }
 
 form input,
@@ -32,6 +36,7 @@ form button {
   display: block;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 form input {
@@ -61,4 +66,27 @@ form button:hover {
 
 .paragrafo-resultado-html {
   background: #83bb85;
+  
+}
+
+.bad-html {
+   padding: 30px;
+  text-align: center;
+   color: #fff;
+   font-size: 30px;
+   font-weight: bold;
+   background-color: rgb(255, 48, 48);
+   border-radius: 10px;
+   font-family: "Open sans", sans-serif;
+}
+
+.verdadeiro-html{
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Open sans", sans-serif;
+   color: #131212;
+   font-size: 30px;
+   background-color: rgb(83, 248, 97);
+   border-radius: 10px;
 }
